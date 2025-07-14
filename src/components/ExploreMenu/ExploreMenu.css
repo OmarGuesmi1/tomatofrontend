@@ -16,7 +16,7 @@
   margin: 0;
   text-shadow: 2px 2px 4px rgba(255, 107, 53, 0.1);
   position: relative;
-  background: linear-gradient(90deg, #ff6b35, #ffd700, #ff6b35);
+  background: linear-gradient(90deg, #ff6b35);
   background-size: 200px 100%;
   -webkit-background-clip: text;
   background-clip: text;
