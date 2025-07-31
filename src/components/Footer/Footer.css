@@ -1,0 +1,116 @@
+:root {
+  --footer-bg: #ffffff;
+  --footer-text: #333333;
+  --footer-muted: #888888;
+  --footer-accent: #ff6b35; /* Orange vif */
+  --footer-hover: #ff944d; /* Orange clair au hover */
+}
+
+.footer {
+  background-color: black;
+  color: var(--footer-text);
+  padding: 60px 5% 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 1px solid #eee;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-content-left,
+.footer-content-center,
+.footer-content-right {
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+.footer-content-left img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-content-left p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--footer-muted);
+  margin-bottom: 20px;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social-icons img {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  filter: grayscale(100%) brightness(0.6);
+}
+
+.footer-social-icons img:hover {
+  transform: scale(1.1);
+  filter: none;
+}
+
+.footer-content-right h2,
+.footer-content-center h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: var(--footer-accent);
+}
+
+.footer-content-right ul,
+.footer-content-center ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content-right li,
+.footer-content-center li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: var(--footer-muted);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-content-right li:hover,
+.footer-content-center li:hover {
+  color: var(--footer-accent);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 40px 0 20px;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-content-left img {
+    margin: 0 auto 20px;
+  }
+
+  .footer-social-icons {
+    justify-content: center;
+  }
+}

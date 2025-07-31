@@ -1,0 +1,109 @@
+:root {
+  --accent-color: #ff6b35;
+  --accent-hover: #e65a2e;
+  --bg-gradient: linear-gradient(135deg, #ffffff 0%, #fff4e6 100%);
+  --text-color: #2d3436;
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-hover: rgba(255, 107, 53, 0.25);
+}
+
+.app-download {
+  background: #ffa9471e;
+  padding: 80px 20px;
+  border-radius: 0; /* plus de bord arrondi global si full-width */
+  box-shadow: 0 10px 30px var(--shadow-light);
+  text-align: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.app-download::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  background: rgba(255, 107, 53, 0.05);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.app-download::after {
+  content: '';
+  position: absolute;
+  bottom: -90px;
+  left: -90px;
+  width: 320px;
+  height: 320px;
+  background: rgba(255, 107, 53, 0.05);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.app-download p {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-color);
+  z-index: 1;
+  position: relative;
+  line-height: 1.4;
+  margin-bottom: 35px;
+}
+
+.app-download p span {
+  color: var(--accent-color);
+}
+
+.app-download-platforms {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.app-download-platforms img {
+  height: 65px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.app-download-platforms img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px var(--shadow-hover);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-download {
+    padding: 60px 15px;
+  }
+
+  .app-download p {
+    font-size: 1.6rem;
+  }
+
+  .app-download-platforms img {
+    height: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-download p {
+    font-size: 1.3rem;
+  }
+
+  .app-download-platforms {
+    gap: 18px;
+  }
+
+  .app-download-platforms img {
+    height: 48px;
+  }
+}
