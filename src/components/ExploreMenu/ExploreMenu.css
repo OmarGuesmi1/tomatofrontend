@@ -5,12 +5,25 @@
   text-align: center;
 }
 
-.explore-menu h1 {
-  font-size: 2.2rem;
-  color: tomato;
-  margin-bottom: 10px;
+.explore-menu h2 {
+   font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #333;
+  position: relative;
 }
-
+.explore-menu h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #ffa500;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
 .explore-menu-text {
   font-size: 1rem;
   color: #555;
